@@ -1,0 +1,34 @@
+package com.hugsy.ecommercebackend.userorder;
+
+import com.hugsy.ecommercebackend.address.Address;
+import com.hugsy.ecommercebackend.localuser.LocalUser;
+import com.hugsy.ecommercebackend.userorerquantities.UserOrderQuantities;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Getter
+@Setter
+@Entity
+@Table(name = "user_order")
+public class UserOrder {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
+    private Long id;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "user_id", nullable = false)
+    private LocalUser user;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "address_id", nullable = false)
+    private Address address;
+
+    @OneToMany(mappedBy = "order", cascade = CascadeType.REMOVE, orphanRemoval = true)
+    private List<UserOrderQuantities> quantitieses = new ArrayList<>();
+
+}
