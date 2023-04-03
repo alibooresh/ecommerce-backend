@@ -1,6 +1,6 @@
-package com.hugsy.ecommercebackend.localuser;
+package com.hugsy.ecommercebackend.model;
 
-import com.hugsy.ecommercebackend.address.Address;
+import com.hugsy.ecommercebackend.model.Address;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -35,5 +35,8 @@ public class LocalUser {
 
     @OneToMany(mappedBy = "user", orphanRemoval = true)
     private List<Address> addresses = new ArrayList<>();
+
+    @Column(name = "phone_number", nullable = false, unique = true, length = 11)
+    private String phoneNumber;
 
 }

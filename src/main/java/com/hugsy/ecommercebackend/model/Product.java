@@ -1,6 +1,6 @@
-package com.hugsy.ecommercebackend.product;
+package com.hugsy.ecommercebackend.model;
 
-import com.hugsy.ecommercebackend.inventory.Inventory;
+import com.hugsy.ecommercebackend.model.Inventory;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

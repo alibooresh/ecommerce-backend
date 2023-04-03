@@ -1,6 +1,5 @@
-package com.hugsy.ecommercebackend.address;
+package com.hugsy.ecommercebackend.model;
 
-import com.hugsy.ecommercebackend.localuser.LocalUser;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
