@@ -1,9 +1,9 @@
 package com.hugsy.ecommercebackend.repository;
 
-import com.hugsy.ecommercebackend.model.LocalUser;
+import com.hugsy.ecommercebackend.model.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRepository extends CrudRepository<LocalUser, Long> {
+public interface UserRepository extends CrudRepository<User, Long> {
 }

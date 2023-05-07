@@ -1,7 +1,7 @@
 package com.hugsy.ecommercebackend.service;
 
 import com.hugsy.ecommercebackend.dtos.RegistrationBody;
-import com.hugsy.ecommercebackend.model.LocalUser;
+import com.hugsy.ecommercebackend.model.User;
 import com.hugsy.ecommercebackend.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
@@ -14,8 +14,8 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public LocalUser registerUser(RegistrationBody registrationBody){
-        LocalUser user = new LocalUser();
+    public User registerUser(RegistrationBody registrationBody){
+        User user = new User();
         user.setUsername(registrationBody.getUsername());
         user.setEmail(registrationBody.getEmail());
         user.setFirstName(registrationBody.getFirstName());
